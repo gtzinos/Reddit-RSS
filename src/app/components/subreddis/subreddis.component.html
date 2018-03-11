@@ -1,0 +1,20 @@
+<mat-card class="filters">
+  <mat-card-content>
+    <div class="fullWidth centerWrapper">
+      <mat-form-field>
+        <input [(ngModel)]="selectedArticleName" matInput placeholder="Sub Reddit name" value="">
+      </mat-form-field>
+      <div>
+        <button mat-raised-button (click)="searchArticles()">
+          Search
+        </button>
+      </div>
+    </div>
+  </mat-card-content>
+</mat-card>
+
+<mat-list>
+  <mat-list-item *ngFor="let article of articles">
+    <a [href]="'https://www.reddit.com' + article.data.permalink" target="_blank">{{article.data.title}}</a>
+  </mat-list-item>
+</mat-list>
