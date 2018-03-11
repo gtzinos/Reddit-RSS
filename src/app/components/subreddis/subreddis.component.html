@@ -2,7 +2,16 @@
   <mat-card-content>
     <div class="fullWidth centerWrapper">
       <mat-form-field>
-        <input [(ngModel)]="selectedArticleName" matInput placeholder="Sub Reddit name" value="">
+        <mat-select [(ngModel)]="selectedFilter" placeholder="Filter name">
+          <mat-option *ngFor="let filter of filters" [value]="filter">
+            {{ filter }}
+          </mat-option>
+        </mat-select>
+      </mat-form-field>
+      <mat-form-field>
+        <input [(ngModel)]="selectedFilterValue" matInput
+          [placeholder]="selectedFilter == 'rss' ? 'Sub Reddit name' : 'Username'"
+          [value]="selectedFilter == 'rss' ? '' : ''">
       </mat-form-field>
       <div>
         <button mat-raised-button (click)="searchArticles()">

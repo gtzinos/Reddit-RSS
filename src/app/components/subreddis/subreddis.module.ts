@@ -6,7 +6,8 @@ import {
   MatInputModule,
   MatButtonModule,
   MatCardModule,
-  MatListModule
+  MatListModule,
+  MatSelectModule
 } from "@angular/material";
 import { FormsModule, ReactiveFormsModule } from "@angular/forms";
 import { CommonModule } from "@angular/common";
@@ -16,6 +17,7 @@ import { CommonModule } from "@angular/common";
     RouterModule.forChild([{ path: "", component: SubreddisComponent }]),
     MatInputModule,
     FormsModule,
+    MatSelectModule,
     ReactiveFormsModule,
     CommonModule,
     MatButtonModule,

@@ -25,4 +25,8 @@ export class RedditService {
     return this.http.get('https://www.reddit.com/r/' + articleName + '/.json', this.httpOptions);
   }
 
+  getUserArticles(username) {
+    return this.http.get('https://www.reddit.com/user/' + username + '/.json', this.httpOptions);
+  }
+
 }
