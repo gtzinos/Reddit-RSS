@@ -10,8 +10,8 @@
       </mat-form-field>
       <mat-form-field>
         <input [(ngModel)]="selectedFilterValue" matInput
-          [placeholder]="selectedFilter == 'rss' ? 'Sub Reddit name' : 'Username'"
-          [value]="selectedFilter == 'rss' ? 'angular' : 'hacker'">
+          [placeholder]="selectedFilter == 'rss' ? 'Sub Reddit name' : 'Username'">
+
       </mat-form-field>
       <div>
         <button mat-raised-button (click)="searchArticles()">
