@@ -1,16 +1,16 @@
-import { Component, OnInit } from '@angular/core';
-import { RedditService } from '../../providers/reddit.service';
+import { Component, OnInit } from "@angular/core";
+import { RedditService } from "../../providers/reddit.service";
 @Component({
-  selector: 'app-subreddis',
-  templateUrl: './subreddis.component.html',
-  styleUrls: ['./subreddis.component.scss']
+  selector: "app-subreddis",
+  templateUrl: "./subreddis.component.html",
+  styleUrls: ["./subreddis.component.scss"]
 })
 export class SubreddisComponent implements OnInit {
-  filters = ['rss', 'user'];
-  selectedFilter = 'rss';
+  filters = ["rss", "user"];
+  selectedFilter = "rss";
   subreddits = [];
   articles = [];
-  selectedFilterValue = '';
+  selectedFilterValue = "";
 
   constructor(public redditService: RedditService) {}
 

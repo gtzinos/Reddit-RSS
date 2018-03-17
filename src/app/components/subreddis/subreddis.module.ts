@@ -7,7 +7,8 @@ import {
   MatButtonModule,
   MatCardModule,
   MatListModule,
-  MatSelectModule
+  MatSelectModule,
+  MatIconModule
 } from "@angular/material";
 import { FormsModule, ReactiveFormsModule } from "@angular/forms";
 import { CommonModule } from "@angular/common";
@@ -19,6 +20,7 @@ import { CommonModule } from "@angular/common";
     FormsModule,
     MatSelectModule,
     ReactiveFormsModule,
+    MatIconModule,
     CommonModule,
     MatButtonModule,
     MatCardModule,

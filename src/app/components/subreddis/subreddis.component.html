@@ -1,20 +1,21 @@
 <mat-card class="filters">
   <mat-card-content>
     <div class="fullWidth centerWrapper">
-      <mat-form-field>
+      <mat-form-field class="filter-item">
         <mat-select [(ngModel)]="selectedFilter" placeholder="Filter name">
           <mat-option *ngFor="let filter of filters" [value]="filter">
             {{ filter }}
           </mat-option>
         </mat-select>
       </mat-form-field>
-      <mat-form-field>
-        <input [(ngModel)]="selectedFilterValue" matInput
+      <mat-form-field class="filter-item">
+        <input [(ngModel)]="selectedFilterValue" matInput (keyup.enter)="searchArticles()"
           [placeholder]="selectedFilter == 'rss' ? 'Sub Reddit name' : 'Username'">
 
       </mat-form-field>
-      <div>
+      <div class="filter-item">
         <button mat-raised-button (click)="searchArticles()">
+          <mat-icon>search</mat-icon>
           Search
         </button>
       </div>

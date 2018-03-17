@@ -22,7 +22,15 @@ export class RedditService {
   }
 
   getSubRedditsArticles(articleName) {
-    return this.http.get('https://www.reddit.com/r/' + articleName + '/.json', this.httpOptions);
+    let endpoint = 'https://www.reddit.com';
+
+    if (articleName) {
+      endpoint +=  '/r/' + articleName + '/';
+    }
+
+    endpoint += '.json';
+
+    return this.http.get(endpoint, this.httpOptions);
   }
 
   getUserArticles(username) {
