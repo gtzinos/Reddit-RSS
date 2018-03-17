@@ -22,10 +22,10 @@ export class RedditService {
   }
 
   getSubRedditsArticles(articleName) {
-    let endpoint = 'https://www.reddit.com';
+    let endpoint = 'https://www.reddit.com/';
 
     if (articleName) {
-      endpoint +=  '/r/' + articleName + '/';
+      endpoint +=  'r/' + articleName + '/';
     }
 
     endpoint += '.json';
