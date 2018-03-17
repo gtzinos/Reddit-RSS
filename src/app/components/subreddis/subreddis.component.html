@@ -9,8 +9,7 @@
         </mat-select>
       </mat-form-field>
       <mat-form-field class="filter-item">
-        <input [(ngModel)]="selectedFilterValue" matInput (keyup.enter)="searchArticles()"
-          [placeholder]="selectedFilter == 'rss' ? 'Sub Reddit name' : 'Username'">
+        <input [(ngModel)]="selectedFilterValue" matInput (keyup.enter)="searchArticles()" [placeholder]="selectedFilter == 'rss' ? 'Sub Reddit name' : 'Username'">
 
       </mat-form-field>
       <div class="filter-item">
@@ -23,8 +22,6 @@
   </mat-card-content>
 </mat-card>
 
-<mat-list>
-  <mat-list-item *ngFor="let article of articles">
-    <a [href]="'https://www.reddit.com' + article.data.permalink" target="_blank">{{article.data.title}}</a>
-  </mat-list-item>
-</mat-list>
+<div>
+  <a *ngFor="let article of articles" [href]="'https://www.reddit.com' + article.data.permalink" target="_blank">{{article.data.title}}</a>
+</div>

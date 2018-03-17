@@ -2,11 +2,11 @@
   background-color: #fcf8e3;
 }
 
-mat-list-item {
+a {
   border-bottom: 1px solid #eee;
 }
 
-mat-list-item:hover {
+a:hover {
   cursor: pointer;
   background-color: #d9edf7;
 }
@@ -14,6 +14,15 @@ mat-list-item:hover {
 a {
   text-decoration: none;
   color: black;
+
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  box-sizing: border-box;
+  padding: 0 16px;
+  position: relative;
+  height: 48px;
 }
 
 .filter-item {
