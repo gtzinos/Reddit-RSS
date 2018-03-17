@@ -6,6 +6,11 @@ mat-list-item {
   border-bottom: 1px solid #eee;
 }
 
+mat-list-item:hover {
+  cursor: pointer;
+  background-color: #d9edf7;
+}
+
 a {
   text-decoration: none;
   color: black;
